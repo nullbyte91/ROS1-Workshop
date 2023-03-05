@@ -1,0 +1,10 @@
+Pose:
+  position:
+    x: 100
+    y: 50
+    z: 25
+  orientation:
+    x: 1.0
+    y: 2.0
+    z: 3.0
+    w: 10.0

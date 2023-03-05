@@ -1,0 +1,11 @@
+<launch>
+    <rosparam file="$(find custom_msg)/config/param.yaml" />
+
+    <!-- Start the publisher node -->
+    <node pkg="custom_msg" type="publisher.py" name="publisher"  output="screen">
+    </node>
+
+    <!-- Start the subscriber node -->
+    <node pkg="custom_msg" type="subscriber.py" name="subscriber"  output="screen">
+    </node>
+</launch>

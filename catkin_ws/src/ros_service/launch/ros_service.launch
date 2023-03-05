@@ -1,0 +1,8 @@
+<launch>
+    <rosparam file="$(find ros_service)/config/param.yaml" />
+    <!-- image_pipeline launch file -->
+    <node pkg="ros_service" type="server.py" name="server"  output="screen">
+    </node>
+    <node pkg="ros_service" type="client.py" name="client"  output="screen">
+    </node>
+</launch>
