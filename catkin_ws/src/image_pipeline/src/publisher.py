@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import sys
 import rospy
+import cv2
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-import cv2
+
 
 class Publisher:
     def __init__(self):

@@ -6,6 +6,6 @@ image_acquisition:
   
   video:
       video_node: 1
-      video_path_0: "/home/nullbyte/Desktop/mygit/ROS1-Workshop/catkin_ws/test/test_1.mp4"
+      video_path_0: "/home/nullbyte/Desktop/ROS1-Workshop/catkin_ws/test/test_1.mp4"
   
   frequency: 10
