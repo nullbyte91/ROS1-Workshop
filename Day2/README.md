@@ -576,41 +576,7 @@ joint origin - "[0.2, 0, 0, 0, 0, 0]"
 joint parent link - "chassis"
 joint child link - "camera"
 ```
-```xml
-  <!-- LASER descriptor start-->
-  <link name="hokuyo">
-    <inertial>
-      <mass value="1e-5"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia
-          ixx="1e-6" ixy="0" ixz="0"
-          iyy="1e-6" iyz="0"
-          izz="1e-6"
-      />
-    </inertial>
 
-    <collision name="hokuyo_collision">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.1 0.1 0.1"/>
-      </geometry>
-    </collision>
-
-    <visual name="hokuyo_visual">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://my_robot/meshes/hokuyo.dae"/>
-      </geometry>
-    </visual>
-  </link>
-
-  <joint type="fixed" name="hokuyo_joint">
-    <origin xyz="0.15 0 0.1" rpy="0 0 0"/>
-    <child link="hokuyo"/>
-    <parent link="chassis"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
-  </joint>
-```
 Full camera descriptor,
 ```python
 my_robot.xacro
@@ -696,7 +662,41 @@ joint parent link - "chassis"
 joint child link - "hokuyo"
 ```
 Same like before, each link should have its own visual, collision and inertial elements.
+```xml
+  <!-- LASER descriptor start-->
+  <link name="hokuyo">
+    <inertial>
+      <mass value="1e-5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia
+          ixx="1e-6" ixy="0" ixz="0"
+          iyy="1e-6" iyz="0"
+          izz="1e-6"
+      />
+    </inertial>
 
+    <collision name="hokuyo_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+
+    <visual name="hokuyo_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot/meshes/hokuyo.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint type="fixed" name="hokuyo_joint">
+    <origin xyz="0.15 0 0.1" rpy="0 0 0"/>
+    <child link="hokuyo"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
+```
 ### Launch the robot
 ```bash
 cd ~/mobile_robot_ws/
