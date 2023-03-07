@@ -1,11 +1,11 @@
 image_acquisition:
-  input_type: "camera_usb" #camera_usb, video
+  input_type: "video" #camera_usb, video
   
   camera_usb: 
       camera_node: 1
   
   video:
       video_node: 1
-      video_path_0: "/home/nullbyte/Desktop/mygit/ROS1-Workshop/catkin_ws/test/test_1.mp4"
+      video_path_0: "/home/nullbyte/Desktop/ROS1-Workshop/catkin_ws/test/test_1.mp4"
   
   frequency: 10

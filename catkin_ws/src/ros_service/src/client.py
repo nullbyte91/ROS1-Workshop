@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import sys
 import rospy
+import cv2
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import cv2
 from ros_service.srv import localizeImg, localizeImgResponse
 import rospy
 import time
