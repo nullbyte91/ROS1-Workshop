@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="robot_service" type="server.py" name="publisher"  output="screen">
+    </node>
+    <node pkg="robot_service" type="process.py" name="process"  output="screen">
+    </node>
+</launch>
